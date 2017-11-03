@@ -41,25 +41,25 @@ public class PiggyBank {
     }
 
     public void RemovePenny() {
-        if (totalSavings > 0) {
+        if (totalSavings >= 0.01) {
             totalSavings -=0.01;
         }
     }
 
     public void RemoveNickel() {
-        if (totalSavings > 0) {
+        if (totalSavings >= 0.05) {
             totalSavings -=0.05;
         }
     }
 
     public void RemoveDime() {
-        if (totalSavings > 0) {
+        if (totalSavings >= 0.1) {
             totalSavings -=0.1;
         }
     }
 
     public void RemoveQuarter() {
-        if (totalSavings > 0) {
+        if (totalSavings >= 0.25) {
             totalSavings -=0.01;
         }
     }
