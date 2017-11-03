@@ -35,6 +35,7 @@ public class MySavings {
             input = bubble.nextInt();
         if(input == 0){
             run = false;
+            break;
         }else if(input == 1){
             myBank.Print();
         }else if(input == 2){

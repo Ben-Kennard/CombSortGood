@@ -10,8 +10,9 @@ package mysavings;
  * @author domcp9815
  */
 public class PiggyBank {
+
     private double totalSavings;
-    private double numPenny,numNickel,numDime,numQuarter;
+    //private double numPenny, numNickel, numDime, numQuarter;
 
     /**
      * Add all the methods to add and remove money from the piggy bank
@@ -19,62 +20,56 @@ public class PiggyBank {
     PiggyBank() {
 
     }
-/**
- * All the methods to keep track of the value in the account 
- */
-    public double AddPenny() {
-        numPenny++;
-        return 0;
-    }
 
-    public double AddNickel() {
-       numNickel++;
-       return 0;
-    }
-
-    public double AddDime() {
-       numDime++;
-        return 0;
-    }
-
-    public double AddQuarter() {
-        numQuarter++;
-        return 0;
-    }
-
-    public double RemovePenny() {
-        if(numPenny>0){ 
-        numPenny--;
-        }
-        return 0;
-    }
-
-    public double RemoveNickel() {
-         if(numNickel>0){ 
-        numNickel--;
-        }
-        return 0;
-    }
-
-    public double RemoveDime() {
-        if(numDime>0){ 
-        numDime--;
-        }
-        return 0;
-    }
-
-    public double RemoveQuarter() {
-     if(numQuarter>0){ 
-        numQuarter--;
-        }
-        return 0;
-    }
     /**
-     * Prints out the total in the users account 
+     * All the methods to keep track of the value in the account
      */
-    public String Print(){ 
-       System.out.println("Your total is: $ "+((numPenny/100)+(numNickel/20)+(numDime/10)+(numQuarter/4)));
-       return "";
+    public void AddPenny() {
+        totalSavings +=0.01;
+    }
+
+    public void AddNickel() {
+        totalSavings +=0.05;
+    }
+
+    public void AddDime() {
+        totalSavings +=0.1;
+    }
+
+    public void AddQuarter() {
+        totalSavings +=0.25;
+    }
+
+    public void RemovePenny() {
+        if (totalSavings > 0) {
+            totalSavings -=0.01;
+        }
+    }
+
+    public void RemoveNickel() {
+        if (totalSavings > 0) {
+            totalSavings -=0.05;
+        }
+    }
+
+    public void RemoveDime() {
+        if (totalSavings > 0) {
+            totalSavings -=0.1;
+        }
+    }
+
+    public void RemoveQuarter() {
+        if (totalSavings > 0) {
+            totalSavings -=0.01;
+        }
+    }
+
+    /**
+     * Prints out the total in the users account
+     */
+    public void Print() {
+        System.out.println("Your total is: $ " + totalSavings);
+        
     }
 
 }
